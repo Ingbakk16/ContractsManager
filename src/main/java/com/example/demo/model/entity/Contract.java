@@ -1,7 +1,7 @@
 package com.example.demo.model.entity;
 import com.example.demo.model.enums.ContractState;
 import jakarta.persistence.*;
-import org.springframework.security.core.userdetails.User;
+import com.example.demo.model.entity.User;
 
 import java.math.BigDecimal;
 import java.time.LocalDate;
