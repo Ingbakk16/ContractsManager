@@ -1,0 +1,7 @@
+.git
+.opencode
+openspec
+target
+.env
+.env.*
+!.env.example

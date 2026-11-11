@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<FindBugsFilter>
+    <!-- These legacy entities use JPA field access (@Id is on the field).
+         Hibernate accesses these persistent fields reflectively. Match only
+         the observed unused-field findings, not other bugs or future fields. -->
+    <Match>
+        <Bug pattern="UUF_UNUSED_FIELD"/>
+        <Class name="com.example.demo.model.entity.Contract"/>
+        <Or>
+            <Field name="actualizationDate"/>
+            <Field name="amount"/>
+            <Field name="length"/>
+            <Field name="name"/>
+            <Field name="startDate"/>
+        </Or>
+    </Match>
+    <Match>
+        <Bug pattern="UUF_UNUSED_FIELD"/>
+        <Class name="com.example.demo.model.entity.User"/>
+        <Or>
+            <Field name="lastname"/>
+            <Field name="name"/>
+        </Or>
+    </Match>
+</FindBugsFilter>

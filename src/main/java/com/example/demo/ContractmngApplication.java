@@ -6,8 +6,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 @SpringBootApplication
 public class ContractmngApplication {
 
-	public static void main(String[] args) {
-		SpringApplication.run(ContractmngApplication.class, args);
-	}
-
+  public static void main(String[] args) {
+    SpringApplication.run(ContractmngApplication.class, args);
+  }
 }
