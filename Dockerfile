@@ -1,4 +1,4 @@
-FROM eclipse-temurin:21-jdk AS build
+FROM eclipse-temurin:25-jdk AS build
 WORKDIR /app
 COPY .mvn .mvn
 COPY mvnw .
@@ -7,7 +7,7 @@ COPY config ./config
 COPY src ./src
 RUN ./mvnw --batch-mode package -DskipTests
 
-FROM eclipse-temurin:21-jre AS runtime
+FROM eclipse-temurin:25-jre AS runtime
 WORKDIR /app
 RUN groupadd --gid 10001 app && useradd --uid 10001 --gid app --no-create-home app
 COPY --from=build --chown=app:app /app/target/*.jar app.jar
